@@ -1,30 +1,291 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEVADA - Helados Artesanales | Donde cada helado es una experiencia única</title>
-    <meta name="description" content="Helados artesanales premium en Medellín. Más de 25 sabores únicos con ingredientes naturales. Tradición de 10 años creando experiencias únicas llenas de frescura y sabor." />
-    <meta name="author" content="Clicka Studio" />
-
-    <meta property="og:title" content="NEVADA - Helados Artesanales" />
-    <meta property="og:description" content="Donde cada helado es una experiencia única, llena de frescura y sabor" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@nevada_helados" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta name="description" content="Helados artesanales premium en Medellín. Más de 25 sabores únicos con ingredientes naturales. Tradición de 10 años creando experiencias únicas llenas de frescura y sabor.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  </head>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <div class="logo-circle"></div>
+                </div>
+                <span class="brand-text">NEVADA</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link">Inicio</a>
+                <a href="#sabores" class="nav-link">Sabores</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#testimonios" class="nav-link">Testimonios</a>
+                <a href="#galeria" class="nav-link">Galería</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="floating-elements">
+            <div class="float-element float-1"></div>
+            <div class="float-element float-2"></div>
+            <div class="float-element float-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="hero-logo-circle"></div>
+            </div>
+            <h1 class="hero-title gradient-text">NEVADA</h1>
+            <h2 class="hero-subtitle">Helados Artesanales</h2>
+            <p class="hero-description">
+                "Donde cada helado es una experiencia única, llena de frescura y sabor"
+            </p>
+            <button class="cta-button" onclick="scrollToSection('sabores')">
+                <span class="emoji-soft">🍦</span> Ver Sabores
+            </button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number gradient-text">5000+</div>
+                    <div class="stat-label">Familias satisfechas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number gradient-text">50+</div>
+                    <div class="stat-label">Sabores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number gradient-text">100%</div>
+                    <div class="stat-label">Sonrisas garantizadas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavors Section -->
+    <section id="sabores" class="flavors-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">Nuestros Sabores</h2>
+            <p class="section-subtitle">Cada sabor cuenta una historia única</p>
+            
+            <div class="flavors-grid">
+                <div class="flavor-card">
+                    <div class="flavor-emoji emoji-soft">🍓</div>
+                    <h3>Fresa Artesanal</h3>
+                    <p>Fresas frescas con crema natural</p>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-emoji emoji-soft">🍫</div>
+                    <h3>Chocolate Belga</h3>
+                    <p>Chocolate importado de primera calidad</p>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-emoji emoji-soft">🥭</div>
+                    <h3>Mango Tropical</h3>
+                    <p>Mangos dulces del trópico colombiano</p>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-emoji emoji-soft">🍦</div>
+                    <h3>Vainilla Premium</h3>
+                    <p>Vainilla natural con notas aromáticas</p>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-emoji emoji-soft">🥥</div>
+                    <h3>Coco Cremoso</h3>
+                    <p>Coco rallado con leche condensada</p>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-emoji emoji-soft">🍯</div>
+                    <h3>Miel de Abeja</h3>
+                    <p>Miel pura con toque de canela</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title gradient-text">Nuestra Historia</h2>
+                    <p class="about-text">
+                        Desde 2013, NEVADA ha sido sinónimo de calidad y sabor en Medellín. 
+                        Comenzamos como un pequeño negocio familiar con la pasión de crear 
+                        helados artesanales únicos.
+                    </p>
+                    <p class="about-text">
+                        Hoy, después de más de 10 años, seguimos comprometidos con la 
+                        excelencia, utilizando solo ingredientes naturales y técnicas 
+                        tradicionales para crear momentos de felicidad.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="master-badge">
+                        <span class="chef-emoji">👨‍🍳</span>
+                        <div class="badge-text">
+                            <strong>Maestro Heladero</strong>
+                            <span>Más de 10 años de experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Los mejores helados de Medellín. El sabor a fresa es increíble, realmente se nota la calidad de los ingredientes."</p>
+                    <div class="testimonial-author">- María González</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Mi familia y yo somos clientes desde hace años. Siempre innovando con sabores únicos y deliciosos."</p>
+                    <div class="testimonial-author">- Carlos Rodríguez</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Excelente atención y helados artesanales de primera. Sin duda los recomiendo al 100%."</p>
+                    <div class="testimonial-author">- Ana Martínez</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400" alt="Helados artesanales">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?w=400" alt="Variedad de sabores">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400" alt="Helado de fresa">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400" alt="Proceso artesanal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">Contáctanos</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+57 312 264 4682</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@nevadahelados.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Medellín, Colombia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="visit-us">
+                    <h3><span class="location-emoji">📍</span> Ven a visitarnos</h3>
+                    <p>Estamos ubicados en el corazón de Medellín, listos para servirte los mejores helados artesanales de la ciudad.</p>
+                    <button class="contact-button" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> Chatea con nosotros
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-circle"></div>
+                    </div>
+                    <h3>NEVADA</h3>
+                    <p>Helados Artesanales</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <a href="#hero">Inicio</a>
+                    <a href="#sabores">Sabores</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NEVADA Helados Artesanales. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <button class="whatsapp-button" onclick="openWhatsApp()" title="Chatea con nosotros">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">¡Chatea con nosotros!</div>
+    </button>
+
+    <script src="script.js"></script>
+</body>
 </html>
