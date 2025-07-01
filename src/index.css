@@ -104,6 +104,14 @@ All colors MUST be HSL.
   100% { background-position: 0% 50%; }
 }
 
+@keyframes rainbow-gradient {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -147,6 +155,26 @@ All colors MUST be HSL.
   100% { transform: translateX(100%); }
 }
 
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wiggle {
+  0%, 7% { transform: rotateZ(0); }
+  15% { transform: rotateZ(-15deg); }
+  20% { transform: rotateZ(10deg); }
+  25% { transform: rotateZ(-10deg); }
+  30% { transform: rotateZ(6deg); }
+  35% { transform: rotateZ(-4deg); }
+  40%, 100% { transform: rotateZ(0); }
+}
+
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 5px rgba(255, 137, 118, 0.5); }
+  50% { text-shadow: 0 0 20px rgba(255, 137, 118, 0.8), 0 0 30px rgba(163, 213, 255, 0.5); }
+}
+
 .animate-gradient {
   background: linear-gradient(-45deg, hsl(var(--nevada-blue-pastel)), hsl(var(--nevada-coral)), hsl(var(--nevada-blue-pastel)), hsl(var(--nevada-cream)));
   background-size: 400% 400%;
@@ -169,8 +197,40 @@ All colors MUST be HSL.
   animation: slideInRight 0.8s ease-out forwards;
 }
 
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-gradient-text {
+  animation: text-glow 2s ease-in-out infinite alternate;
+}
+
 .text-gradient {
   background: linear-gradient(135deg, hsl(var(--nevada-blue-dark)), hsl(var(--nevada-coral)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-rainbow {
+  background: linear-gradient(45deg, 
+    hsl(var(--nevada-blue-dark)), 
+    hsl(var(--nevada-blue-pastel)), 
+    hsl(var(--nevada-coral)), 
+    hsl(var(--nevada-blue-dark)));
+  background-size: 300% 300%;
+  animation: rainbow-gradient 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-white {
+  background: linear-gradient(135deg, white, rgba(255,255,255,0.8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -235,4 +295,14 @@ All colors MUST be HSL.
 .slide-right.visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* New hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 137, 118, 0.5);
+  transform: scale(1.05);
+}
+
+.rotate-on-hover:hover {
+  transform: rotate(5deg) scale(1.05);
 }
