@@ -35,7 +35,7 @@ const StatsCounter = () => {
   const animateCounters = () => {
     stats.forEach((stat) => {
       let current = 0;
-      const increment = stat.value / 100; // 100 frames for smooth animation
+      const increment = stat.value / 100;
       const timer = setInterval(() => {
         current += increment;
         if (current >= stat.value) {
@@ -54,7 +54,7 @@ const StatsCounter = () => {
     <section ref={sectionRef} className="py-20 bg-gradient-to-r from-nevada-blue-pastel/20 to-nevada-coral/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold font-poppins text-gradient-rainbow mb-4 animate-gradient-text">
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins text-gradient-rainbow-slow mb-4">
             Nuestra Tradición en Números
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-nevada-coral to-nevada-blue-pastel mx-auto animate-pulse"></div>
@@ -67,10 +67,10 @@ const StatsCounter = () => {
               className={`text-center p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-500 fade-in hover:rotate-1`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="text-5xl mb-4 animate-bounce" style={{ animationDelay: `${index * 0.5}s` }}>
+              <div className="text-5xl mb-4 animate-gentle-zoom" style={{ animationDelay: `${index * 0.5}s` }}>
                 {stat.icon}
               </div>
-              <div className="text-5xl md:text-6xl font-bold font-poppins text-gradient-rainbow mb-2 animate-pulse">
+              <div className="text-5xl md:text-6xl font-bold font-poppins text-gradient-rainbow-slow mb-2">
                 {counters[stat.key as keyof typeof counters]}{stat.suffix}
               </div>
               <p className="text-xl text-nevada-blue-dark font-medium">

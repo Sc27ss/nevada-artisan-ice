@@ -6,7 +6,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Text Content */}
           <div className="slide-left">
-            <h2 className="text-4xl md:text-5xl font-bold font-poppins text-gradient-rainbow mb-6 animate-gradient-text">
+            <h2 className="text-4xl md:text-5xl font-bold font-poppins text-gradient-rainbow-slow mb-6">
               Nuestra Historia
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-nevada-coral to-nevada-blue-pastel mb-8 animate-pulse"></div>
@@ -17,7 +17,7 @@ const AboutSection = () => {
               </p>
               
               <p className="text-lg text-nevada-blue-dark/70 mb-6 leading-relaxed">
-                Cada helado es elaborado artesanalmente con técnicas tradicionales perfeccionadas a lo largo de los años. Nuestro compromiso con la calidad nos ha convertido en la heladería de referencia para quienes buscan una experiencia única.
+                Cada helado es elaborado artesanalmente con técnicas tradicionales perfeccionadas a lo largo de los años.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ const AboutSection = () => {
               {/* Floating Card */}
               <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl max-w-xs animate-float">
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-nevada-blue-pastel to-nevada-coral flex items-center justify-center text-2xl animate-spin-slow">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-nevada-blue-pastel to-nevada-coral flex items-center justify-center text-2xl">
                     👨‍🍳
                   </div>
                   <div>

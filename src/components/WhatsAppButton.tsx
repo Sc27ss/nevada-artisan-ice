@@ -8,7 +8,7 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={openWhatsApp}
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group animate-bounce hover:animate-pulse"
+      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group animate-gentle-pulse"
       title="Chatea con nosotros"
     >
       {/* WhatsApp Icon */}

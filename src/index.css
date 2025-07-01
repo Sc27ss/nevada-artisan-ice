@@ -112,6 +112,14 @@ All colors MUST be HSL.
   100% { background-position: 0% 50%; }
 }
 
+@keyframes rainbow-gradient-slow {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -175,6 +183,16 @@ All colors MUST be HSL.
   50% { text-shadow: 0 0 20px rgba(255, 137, 118, 0.8), 0 0 30px rgba(163, 213, 255, 0.5); }
 }
 
+@keyframes gentle-zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  50% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+}
+
 .animate-gradient {
   background: linear-gradient(-45deg, hsl(var(--nevada-blue-pastel)), hsl(var(--nevada-coral)), hsl(var(--nevada-blue-pastel)), hsl(var(--nevada-cream)));
   background-size: 400% 400%;
@@ -209,6 +227,14 @@ All colors MUST be HSL.
   animation: text-glow 2s ease-in-out infinite alternate;
 }
 
+.animate-gentle-zoom {
+  animation: gentle-zoom 4s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
 .text-gradient {
   background: linear-gradient(135deg, hsl(var(--nevada-blue-dark)), hsl(var(--nevada-coral)));
   -webkit-background-clip: text;
@@ -224,6 +250,19 @@ All colors MUST be HSL.
     hsl(var(--nevada-blue-dark)));
   background-size: 300% 300%;
   animation: rainbow-gradient 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-rainbow-slow {
+  background: linear-gradient(45deg, 
+    hsl(var(--nevada-blue-dark)), 
+    hsl(var(--nevada-blue-pastel)), 
+    hsl(var(--nevada-coral)), 
+    hsl(var(--nevada-blue-dark)));
+  background-size: 300% 300%;
+  animation: rainbow-gradient-slow 8s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
